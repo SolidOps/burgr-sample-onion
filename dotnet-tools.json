@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "burgr": {
+      "version": "1.10.0",
+      "commands": [
+        "burgr"
+      ],
+      "rollForward": false
+    }
+  }
+}

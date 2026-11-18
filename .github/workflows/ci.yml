@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+      - name: Restore burgr
+        run: dotnet tool restore
+      - name: Generate the code from the model
+        run: dotnet burgr specs
+      - name: Committed generated code is up to date
+        run: |
+          git status --porcelain
+          test -z "$(git status --porcelain)"
+      - name: Build
+        run: dotnet build UM.slnx
+      - name: Test
+        run: dotnet test UM.slnx --no-build

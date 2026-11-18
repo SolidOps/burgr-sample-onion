@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="src/UM.Api/UM.Api.csproj" />
+  <Project Path="src/UM.Application/UM.Application.csproj" />
+  <Project Path="src/UM.Domain/UM.Domain.csproj" />
+  <Project Path="src/UM.Infrastructure/UM.Infrastructure.csproj" />
+  <Project Path="src/UM.Tests/UM.Tests.csproj" />
+</Solution>

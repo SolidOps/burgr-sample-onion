@@ -1,0 +1,6 @@
+{
+  "ProjectName": "UM",
+  "NamespaceName": "SolidOps",
+  "BuildingDirectory": "../src/",
+  "TemplatePackage": { "Id": "Burgr.Templates.Onion", "Version": "1.10.0" }
+}

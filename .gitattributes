@@ -1,0 +1,6 @@
+* text=auto
+# burgr writes CRLF on every machine: so does the checkout, for the CI to compare.
+*.g.* text eol=crlf
+*.f.* text eol=crlf
+# The harness hook runs under bash.
+*.sh text eol=lf
